@@ -25,5 +25,6 @@ func (this *MainController) Display() {
 
 func main() {
 	beego.Router("/display", &MainController{}, "get:Display")
+	beego.Router("/image", &ImageController{}, "post:Upload")
 	beego.Run()
 }
